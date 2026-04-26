@@ -1,0 +1,15 @@
+node_modules/
+dist/
+env/
+.env
+.env.*
+*.log
+logs/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+package-lock.json
+/.DS_Store
+/.vscode/
+/.idea/
+*.swp

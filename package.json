@@ -1,0 +1,33 @@
+{
+  "name": "noc-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johns70/NOC-Task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/johns70/NOC-Task/issues"
+  },
+  "homepage": "https://github.com/johns70/NOC-Task#readme",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "cron": "^4.4.0"
+  }
+}
