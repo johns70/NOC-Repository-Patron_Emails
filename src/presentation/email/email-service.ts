@@ -1,7 +1,5 @@
 import nodemailer from 'nodemailer';
 import { envs } from '../../config/plugins/envs.plugins';
-import { LogRepository } from '../../domain/repository/log.repository';
-import { LogEntity, LogSeverityLevel } from '../../domain/entities/log-entitys';
 
 interface sendEmailOption {
     to: string| string[],
@@ -16,7 +14,7 @@ interface Attachment {
     filename: string,
     path: string
 }
-
+// la clase donde cargamos nuestras .envs y validados correo y contraseña
 export class EmailService {
     private transport = nodemailer.createTransport({
         service: envs.MAILER_SERVICE,
@@ -26,10 +24,9 @@ export class EmailService {
         }
     })
 
-    constructor(
-    ){}
+    constructor(){}
 
-
+    // sendEmail esto envia el correo
     async sendEmail(option:sendEmailOption):Promise<boolean>{
         const { to, subject, htmlBody, attachment = [] } = option
 
@@ -49,6 +46,7 @@ export class EmailService {
         }
     }
 
+    // Aqui la clase es para estructurar los Logs
      async SendEmailWithSystemLogs( to: string | string[] ) {
         const subject = `Info Logs del Servidor`
         const htmlBody = `

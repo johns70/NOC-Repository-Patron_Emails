@@ -35,7 +35,7 @@ export class Server {
            emailService,
            fileSystemLogRepository
        ).execute(
-        ['amadorbenitezgabriela@gmail.com']
+        ['amadorbenitezgabriel@gmail.com']
        )
         // console.log("hollaaa")
         // const result = await email.sendEmail({
