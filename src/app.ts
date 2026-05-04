@@ -7,8 +7,8 @@ import { Server } from "./presentation/server"
 
 
 function main(){
-    // Server.start()
-    console.log(envs.PORT)
+    Server.start()
+    // console.log(envs.SECRET_EMAIL, envs.MAILER_EMAIL)
 }
 
 // email: process.env.PORT "3000" 
